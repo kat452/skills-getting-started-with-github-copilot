@@ -142,3 +142,56 @@ footer {
   padding: 20px;
   color: #666;
 }
+
+.participants-list {
+  margin-top: 10px;
+  padding-left: 20px;
+  list-style-type: disc;
+  color: #555;
+}
+
+.participants-list li {
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Night mode styles */
+body.night-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+header.night-mode {
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+section.night-mode {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+.activity-card.night-mode {
+  background-color: #2a2a2a;
+  border-color: #444;
+}
+
+/* Night mode toggle button */
+.night-mode-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #1a237e;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.night-mode-btn:hover {
+  background-color: #3949ab;
+}
