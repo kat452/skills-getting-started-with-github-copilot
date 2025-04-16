@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const activitySelect = document.getElementById("activity");
   const signupForm = document.getElementById("signup-form");
   const messageDiv = document.getElementById("message");
+  const nightModeToggle = document.getElementById("night-mode-toggle");
 
   // Fetch activities from the API
   fetch("/activities")
@@ -81,6 +82,22 @@ document.addEventListener("DOMContentLoaded", () => {
       messageDiv.classList.remove("hidden");
       console.error("Error signing up:", error);
     }
+  });
+
+  // Toggle night mode
+  nightModeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("night-mode");
+    document.querySelector("header").classList.toggle("night-mode");
+    document.querySelectorAll("section").forEach((section) => {
+      section.classList.toggle("night-mode");
+    });
+    document.querySelectorAll(".activity-card").forEach((card) => {
+      card.classList.toggle("night-mode");
+    });
+
+    // Update button text
+    nightModeToggle.textContent =
+      nightModeToggle.textContent === "Night Mode" ? "Day Mode" : "Night Mode";
   });
 
   // Initialize app
